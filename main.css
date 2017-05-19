@@ -1,0 +1,165 @@
+/* Add this to the very top of your CSS file to reset default styles */
+/*include each tag that's in your HTML for that page*/
+html, body, h1, h2,
+h3, p, ol, ul, li, a {
+ padding: 0;
+ border: 0;
+ margin: 0;
+}
+body {
+  padding: 0px 0px 0px 0px;
+  background-color: #5f5f5f; /* you should always set a background color in
+  case the background image fails */
+  background-image: url(images/soft-flowers.jpg); /* the background image
+  has the path inside the url(), no need for double-quotes ""*/
+  background-position: top center; /* the left part has: top center bottom
+  the right part has: left center right */
+  /background-repeat: repeat; /* repeat the image */
+  /*background-repeat: repeat-x;*/ /* repeat on x axis only */
+  /*background-repeat: repeat-y;*/ /* repeat on y axis only */
+  /*background-repeat: no-repeat;*/ /* not repeating the image */
+  /***********
+  SHORTCUT for BACKGROUND:
+  background: #5f5f5f url(images/soft-flowers.jpg) top center repeat;
+  ***********/
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  color: red;
+}
+p {
+  font-size: 18px;
+}
+ol li:first-child { /* Using pseudo-selectors to narrow selection criteria */
+  /*select only the first li tag*/
+  color: red;
+}
+ol li:last-child { /* Using pseudo-selectors to narrow selection criteria */
+  /*select only the last li tag*/
+  color: green;
+}
+h1{
+  margin: 10px 0 20px 0; /* margin top right bottom left */
+  padding: 5px 5px 5px 5px; /* padding top right bottom left */
+  /*color: #ffffff;*/
+  /*text-align: center;*/
+  /*background-color: grey;*/
+  /*border: 6px solid black; /* border: width style color */
+}
+h2 {
+  margin: 40px 0 15px 0; /* margin top right bottom left */
+}
+h3 {
+  margin: 10px 0 10px 0; /* margin top right bottom left */
+  border-bottom: 1px solid #CCCCCC;
+  padding-bottom: 3px;
+}
+ul {
+  padding: 0 0 0 50px;
+}
+.header {
+  padding: 10px;
+  background-color: #b56663;
+}
+.header .nav a {
+  color: #ffffff;
+}
+/* we have replaced the h1 text title with image, which causes problem:
+  h1 is a block-level tag while image is an inline-level tag.
+  so, we must specify header image as display: block;
+  And center it with margin auto.
+  Since h1 has been replaced with img, change h2 to h1 and h3 to h2.
+*/
+.header img{
+  display: block;
+  margin: 30px auto 30px auto;
+}
+.header h2 {
+  text-align: center;
+  color: #2c74e8;
+}
+.main-content {
+  width: 500px;
+
+  margin: 30px auto 0 auto;
+  /* Centering content:
+  If you want to center an ENTIRE block-level tag and it is fixed-width,
+  then set the left and right margin to auto.
+  Auto means "take as much space as you can."
+  */
+  background-color: #74a0e8;
+  /*background: #74a0e8 url(images/soft-horses.jpg) top center repeat;*/
+  border: 3px solid #000000;
+  padding: 50px;
+
+}
+
+.hobbies { /* .hobbies is a specific ul */
+  list-style-type: none; /* removes the dots */
+  padding: 0; /* reset sides to 0 */
+}
+.hobbies li {
+  border: 2px solid #2c74e8;
+  padding-left: 15px;
+  margin-bottom: 10px;
+  /*padding-bottom: 10px;*/
+  background: #86e569 url(images/soft-lollies.png) top center repeat;
+
+}
+.hobbies h3 {
+  border-bottom: 0;
+}
+.hobbies a {
+  color: #2c74e8;
+  text-decoration: none;
+}
+.hobbies p {
+  margin-bottom: 10px;
+}
+.hobbies img {
+  width: 100px;
+  float: left;
+  padding: 20px 10px 10px 10px;
+}
+ol {
+  padding: 0 0 0 50px;
+}
+ul li {
+  font-size: 24px;
+}
+.nav {
+  padding-left: 0;
+  text-align: center;
+}
+.nav a {
+  /* This selector says find all a tags
+  that are children of any tag with a
+  class of “nav”, and set the color to
+  blue and turn off the underline. */
+  color: #0000af;
+  text-decoration: none;
+}
+.nav li {
+  display: inline;
+  padding: 0 10px 0 10px;
+}
+.photos {
+  padding: 0; /* removes all paddings */
+}
+.photos ul {
+  list-style-type: none; /* removes bullets */
+}
+.photos li {
+  display: inline; /* set images in horizontal list */
+}
+.photos li img {
+  width: 200px; /* set the size of each image */
+}
+.sub-content-image img {
+  width: 400px;
+  display: block;
+  margin: 10px auto 10px auto;
+}
