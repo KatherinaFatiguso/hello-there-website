@@ -1,10 +1,12 @@
 /* Add this to the very top of your CSS file to reset default styles */
 /*include each tag that's in your HTML for that page*/
 html, body, h1, h2,
-h3, p, ol, ul, li, a {
+h3, h4, p, ol, ul, li, a {
  padding: 0;
  border: 0;
  margin: 0;
+ font-size: 100%; /* the font weights and sizes won’t follow an arbitrary default */
+ font: inherit;
 }
 body {
   padding: 0px 0px 0px 0px;
@@ -22,6 +24,8 @@ body {
   SHORTCUT for BACKGROUND:
   background: #5f5f5f url(images/soft-flowers.jpg) top center repeat;
   ***********/
+  font-family: Helvetica, Arial, "Times New Roman", sans-serif;
+  /* First font is the ideal, the next ones are the fall-back. */
 }
 a {
   text-decoration: none;
@@ -31,7 +35,7 @@ a:hover {
   color: red;
 }
 p {
-  font-size: 18px;
+  font-size: 16px;
 }
 ol li:first-child { /* Using pseudo-selectors to narrow selection criteria */
   /*select only the first li tag*/
@@ -44,6 +48,8 @@ ol li:last-child { /* Using pseudo-selectors to narrow selection criteria */
 h1{
   margin: 10px 0 20px 0; /* margin top right bottom left */
   padding: 5px 5px 5px 5px; /* padding top right bottom left */
+  font-size: 24px; /* setting the font size for h1 */
+  font-weight: bold;
   /*color: #ffffff;*/
   /*text-align: center;*/
   /*background-color: grey;*/
@@ -51,11 +57,14 @@ h1{
 }
 h2 {
   margin: 40px 0 15px 0; /* margin top right bottom left */
+  font-size: 20px; /* setting the font size for h2 */
+  font-weight: bold;
 }
 h3 {
   margin: 10px 0 10px 0; /* margin top right bottom left */
-  border-bottom: 1px solid #CCCCCC;
   padding-bottom: 3px;
+  font-size: 18px; /* setting the font size for h3 */
+  font-weight: bold;
 }
 ul {
   padding: 0 0 0 50px;
@@ -83,7 +92,6 @@ ul {
 }
 .main-content {
   width: 500px;
-
   margin: 30px auto 0 auto;
   /* Centering content:
   If you want to center an ENTIRE block-level tag and it is fixed-width,
@@ -96,7 +104,10 @@ ul {
   padding: 50px;
 
 }
-
+.main-content p {
+  line-height: 30px; /* Beware: this will affect the paragraph in class hobbies,
+  because class hobbies is inside the main-content class */
+}
 .hobbies { /* .hobbies is a specific ul */
   list-style-type: none; /* removes the dots */
   padding: 0; /* reset sides to 0 */
@@ -105,7 +116,6 @@ ul {
   border: 2px solid #2c74e8;
   margin-bottom: 10px;
   background: #86e569 url(images/soft-lollies.png) top center repeat;
-
 }
 .hobbies h3 {
   border-bottom: 0;
@@ -115,11 +125,16 @@ ul {
   text-decoration: none;
 }
 .hobbies p {
-  margin-bottom: 10px;
+  margin: 10px;
+  line-height: 20px;/* this is to counteract the line height in main-content class for p */
 }
 .hobbies img {
   height: 150px;
-  float: left;
+  float: left; /* Note about float: h3 and p takes up a block space, so if you put
+  an image next to h3 or p, img will stay on separate block.
+  Solution to problem: Put the img, h3, and p ALL in one li or class and float the img left.
+  This makes the image take up some of the left space that the h3 and p boxes would
+  normally eat up as block-level tags.  */
   padding: 0 10px 0 0;
 }
 .hobbies li {
@@ -127,9 +142,6 @@ ul {
 }
 ol {
   padding: 0 0 0 50px;
-}
-ul li {
-  font-size: 24px;
 }
 .nav {
   padding-left: 0;
@@ -163,4 +175,13 @@ ul li {
   width: 400px;
   display: block;
   margin: 10px auto 10px auto;
+}
+.footer p {
+ color: #b56663;
+ text-align: center;
+ font-weight: bold;
+ font-size: 12px;
+ font-style: italic;
+ text-transform: uppercase;
+ padding: 20px 0 20px 0;
 }
