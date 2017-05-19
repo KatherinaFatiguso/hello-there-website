@@ -103,9 +103,7 @@ ul {
 }
 .hobbies li {
   border: 2px solid #2c74e8;
-  padding-left: 15px;
   margin-bottom: 10px;
-  /*padding-bottom: 10px;*/
   background: #86e569 url(images/soft-lollies.png) top center repeat;
 
 }
@@ -120,9 +118,12 @@ ul {
   margin-bottom: 10px;
 }
 .hobbies img {
-  width: 100px;
+  height: 150px;
   float: left;
-  padding: 20px 10px 10px 10px;
+  padding: 0 10px 0 0;
+}
+.hobbies li {
+  height: 150px; /* match the height of the list to the height of the image */
 }
 ol {
   padding: 0 0 0 50px;
