@@ -108,6 +108,10 @@ ul {
   line-height: 30px; /* Beware: this will affect the paragraph in class hobbies,
   because class hobbies is inside the main-content class */
 }
+.main-content h2 {
+  text-align: center;
+  padding-bottom: 20px;
+}
 .hobbies { /* .hobbies is a specific ul */
   list-style-type: none; /* removes the dots */
   padding: 0; /* reset sides to 0 */
@@ -184,4 +188,69 @@ ol {
  font-style: italic;
  text-transform: uppercase;
  padding: 20px 0 20px 0;
+}
+
+.button {
+  background-color: #2c74e8;
+  border: 6px outset white;
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  padding: 15px 32px;
+  display: block; /* we display it as a block so that we can center it with margin auto*/
+  margin: 40px auto 10px auto;
+}
+
+label, input {
+  display: block;
+  /*labels and inputs are inline-level tags, but it usually makes sense to
+display one on top of the other like block-level instead of side-by-side.*/
+}
+label {
+  margin-bottom: 5px;
+  /* This margin gives space under the label, between the label and input field */
+}
+input {
+  /*width: 500px;*//* IMPORTANT: Do not specify input width here. This will set the
+  width of all input to be 500px and forced all input to be displayed as BLOCK.
+  Later if you want to set a checkbox to be displayed INLINE, it won't work because
+  it is forced to have the width as 500px.
+  Specifiy the width instead into each individual input field.
+  */
+  margin-bottom: 30px;
+  /* This margin gives space under the input field */
+}
+input[type=text] {
+  border: 2px solid #2c74e8;
+  font-size: 20px;
+  padding: 10px;
+  /*margin-bottom: 15px;*/
+}
+textarea {
+  border: 2px solid #2c74e8;
+  font-size: 20px;
+  width: 500px; /* This sets the width of the textarea field */
+  padding: 10px;
+  margin-bottom: 15px;
+}
+input[type=checkbox], label[for=approved] {
+  display: inline;
+  padding-bottom: 50px;
+}
+input[type=radio], label[for=easy-level], label[for=medium-level], label[for=hard-level] {
+  display: inline;
+  padding-right: 45px;
+}
+input[type=file] {
+  display: inline;
+}
+input[type=password] {
+  border: 2px solid #2c74e8;
+}
+input[type=submit] {
+  font-size: 20px;
+  width: 200px;
+  height: 50px;
+  background-color: #2c74e8;
 }
