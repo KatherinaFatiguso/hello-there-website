@@ -210,6 +210,7 @@ display one on top of the other like block-level instead of side-by-side.*/
 label {
   margin-bottom: 5px;
   /* This margin gives space under the label, between the label and input field */
+  font-weight: bold;
 }
 input {
   /*width: 500px;*//* IMPORTANT: Do not specify input width here. This will set the
@@ -223,30 +224,36 @@ input {
 }
 input[type=text] {
   border: 2px solid #2c74e8;
-  font-size: 20px;
-  padding: 10px;
-  /*margin-bottom: 15px;*/
+  font-size: 20px; /* This increases the size of the font. */
+  width: 470px; /* This sets the width of the Idea Title input field */
+  padding: 10px; /* This creates the space around the input text */
 }
 textarea {
   border: 2px solid #2c74e8;
   font-size: 20px;
-  width: 500px; /* This sets the width of the textarea field */
+  width: 470px; /* This sets the width of the textarea field */
+  height: 150px;
   padding: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
+}
+input[type=radio], label[for=easy-level], label[for=medium-level], label[for=hard-level] {
+  display: inline;
+  padding-right: 50px;
+  margin-bottom: 30px;
 }
 input[type=checkbox], label[for=approved] {
   display: inline;
   padding-bottom: 50px;
-}
-input[type=radio], label[for=easy-level], label[for=medium-level], label[for=hard-level] {
-  display: inline;
-  padding-right: 45px;
+  margin-bottom: 30px;
 }
 input[type=file] {
   display: inline;
+  margin-bottom: 30px;
 }
 input[type=password] {
   border: 2px solid #2c74e8;
+  padding: 10px;
+  margin-bottom: 30px;
 }
 input[type=submit] {
   font-size: 20px;
